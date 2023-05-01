@@ -31,7 +31,6 @@ openBtn.innerText = 'open me'
 wrap.append(openBtn)
 
 
-
 openBtn.addEventListener('click', function () {
   if (!isKeyboardOpen) {
     keyboard.classList.add('keyboard-on')
@@ -48,7 +47,6 @@ openBtn.addEventListener('click', function () {
     openBtn.textContent = 'open me'
   }
 })
-
 
 let keyboard = document.createElement('div')
 keyboard.classList.add('keyboard')
