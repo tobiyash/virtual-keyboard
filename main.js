@@ -1,5 +1,7 @@
+const wrap = document.createElement('div')
 const openBtn = document.createElement('button')
 const keyboardOutput = document.createElement('textarea')
+const title = document.createElement('h1')
 let isBigLetter = false
 let capslock = false
 let shiftOn = false
@@ -13,13 +15,20 @@ let isVoiceOn = false
 let clearAll
 let btnBcsp = document.querySelector('.keyboard__key--backspace')
 
+wrap.classList.add('wrap')
+document.body.append(wrap)
+
+title.innerText = 'Virtual Keyboard'
+wrap.append(title)
+
 keyboardOutput.classList.add('keyboard-output')
 keyboardOutput.rows = 7
-document.body.append(keyboardOutput)
+wrap.append(keyboardOutput)
 
 openBtn.classList.add('open-btn')
 openBtn.type = 'button'
-document.body.append(openBtn)
+openBtn.innerText = 'open me'
+wrap.append(openBtn)
 
 
 
